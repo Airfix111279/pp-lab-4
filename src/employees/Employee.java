@@ -1,3 +1,6 @@
+package employees;
+
+
 public class Employee {
     private String fullName;
     private double salary;
