@@ -1,4 +1,3 @@
-
 import employees.*;
 
 public class Company {
@@ -13,11 +12,18 @@ public class Company {
         employees[4] = new Manager("Dawid Jeleniewski", 48000);
 
         
-        ((Manager) employees[0]).setNumberOfSubordinates(5);
+        int nonManagerCount = 0;
+        for (Employee employee : employees) {
+            if (!(employee instanceof Manager)) {
+                nonManagerCount++;
+            }
+        }
 
         
-        ((Worker) employees[1]).setPosition("Programmer");
-        ((Worker) employees[3]).setPosition("Assistant");
+        ((Manager) employees[0]).setNumberOfSubordinates(nonManagerCount);
+
+        
+        employees[0].setSalary(75000);
 
         
         System.out.println("Dane dla wszystkich pracowników:");
