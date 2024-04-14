@@ -1,6 +1,6 @@
 package employees;
 
-// Manager.java
+
 public class Manager extends Employee {
     public int numberOfSubordinates;
 
